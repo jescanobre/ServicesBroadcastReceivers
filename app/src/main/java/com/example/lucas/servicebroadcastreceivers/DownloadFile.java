@@ -5,6 +5,9 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Environment;
 
+//Thread faz download e passa uma url, o nome do arquivo e o contexto,
+// o contexto serve p/ pegar o serviço de download
+
 public class DownloadFile extends Thread {
     private String url;
     private String fileName;
