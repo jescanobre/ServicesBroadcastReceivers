@@ -1,4 +1,4 @@
-package com.example.lucas.servicebroadcastreceivers;
+package com.example.jesca.servicebroadcastreceivers;
 
 import android.Manifest;
 import android.content.ComponentName;
@@ -21,12 +21,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.lucas.servicebroadcastreceivers.services.DownloadIntentService;
-import com.example.lucas.servicebroadcastreceivers.services.DownloadService;
-import com.example.lucas.servicebroadcastreceivers.services.MonitorChangeBindedService;
-import com.example.lucas.servicebroadcastreceivers.services.MonitorChangeBindedService.LocalBinder;
-import com.example.lucas.servicebroadcastreceivers.services.MonitorChangeService;
-import com.example.lucas.servicebroadcastreceivers.services.PlayMusicService;
+import com.example.jesca.servicebroadcastreceivers.services.DownloadIntentService;
+import com.example.jesca.servicebroadcastreceivers.services.DownloadService;
+import com.example.jesca.servicebroadcastreceivers.services.MonitorChangeBindedService;
+import com.example.jesca.servicebroadcastreceivers.services.MonitorChangeBindedService.LocalBinder;
+import com.example.jesca.servicebroadcastreceivers.services.MonitorChangeService;
+import com.example.jesca.servicebroadcastreceivers.services.PlayMusicService;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -113,7 +113,8 @@ public class MainActivity extends AppCompatActivity {
     public void onClickBindedService(View view) {
         if (mBound) {
             String hour = bindedService.getHour();
-            Toast.makeText(this, "hour: " + hour, Toast.LENGTH_SHORT).show();
+            if( hour != null)
+                Toast.makeText(this, "hour: " + hour, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -139,6 +140,8 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(MonitorChangeBindedService.EXTRA_URL, "http://www.quehorassao.com.br/");
         intent.putExtra(MonitorChangeBindedService.EXTRA_ID_ELEMENT, "cas1");
         bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+
+        Toast.makeText(this, "Binded Sevice started!", Toast.LENGTH_SHORT).show();
 //        startService(intent);
     }
 

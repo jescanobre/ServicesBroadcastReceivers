@@ -1,15 +1,10 @@
-package com.example.lucas.servicebroadcastreceivers.services;
+package com.example.jesca.servicebroadcastreceivers.services;
 
 import android.app.Service;
-import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
-import android.util.Log;
-import android.widget.Toast;
 
-import com.example.lucas.servicebroadcastreceivers.DownloadFile;
-
-import java.util.ArrayList;
+import com.example.jesca.servicebroadcastreceivers.DownloadFile;
 
 public class DownloadService extends Service {
     private String url;

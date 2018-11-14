@@ -1,4 +1,4 @@
-package com.example.lucas.servicebroadcastreceivers.receivers;
+package com.example.jesca.servicebroadcastreceivers.receivers;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -9,16 +9,13 @@ import android.os.SystemClock;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.lucas.servicebroadcastreceivers.services.MonitorChangeBindedService;
+import com.example.jesca.servicebroadcastreceivers.services.MonitorChangeBindedService;
 
 public class BootReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         if (intent.getAction().equals("android.intent.action.BOOT_COMPLETED")) {
             Log.w("BootReceiver", "here!");
-            AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-            PendingIntent alarmIntent = PendingIntent.getBroadcast(context, 0, new Intent(), 0);
-            alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime(), alarmIntent);
             Toast.makeText(context, "Booting Completed", Toast.LENGTH_LONG).show();
 
             Intent i = new Intent(context, MonitorChangeBindedService.class);

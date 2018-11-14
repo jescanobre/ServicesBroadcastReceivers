@@ -1,4 +1,4 @@
-package com.example.lucas.servicebroadcastreceivers;
+package com.example.jesca.servicebroadcastreceivers;
 
 import org.junit.Test;
 

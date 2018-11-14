@@ -1,16 +1,11 @@
-package com.example.lucas.servicebroadcastreceivers.services;
+package com.example.jesca.servicebroadcastreceivers.services;
 
 import android.app.IntentService;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Intent;
-import android.content.Context;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
-import android.support.v4.app.TaskStackBuilder;
 
-import com.example.lucas.servicebroadcastreceivers.MainActivity;
-import com.example.lucas.servicebroadcastreceivers.R;
+import com.example.jesca.servicebroadcastreceivers.R;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;

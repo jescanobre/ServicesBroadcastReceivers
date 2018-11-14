@@ -1,10 +1,9 @@
-package com.example.lucas.servicebroadcastreceivers.services;
+package com.example.jesca.servicebroadcastreceivers.services;
 
 import android.app.IntentService;
 import android.content.Intent;
-import android.content.Context;
 
-import com.example.lucas.servicebroadcastreceivers.DownloadFile;
+import com.example.jesca.servicebroadcastreceivers.DownloadFile;
 
 public class DownloadIntentService extends IntentService {
 

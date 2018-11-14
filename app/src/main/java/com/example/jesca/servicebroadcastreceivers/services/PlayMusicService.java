@@ -1,11 +1,10 @@
-package com.example.lucas.servicebroadcastreceivers.services;
+package com.example.jesca.servicebroadcastreceivers.services;
 
 import android.app.IntentService;
 import android.content.Intent;
-import android.content.Context;
 import android.net.Uri;
 
-import com.example.lucas.servicebroadcastreceivers.PlayMusic;
+import com.example.jesca.servicebroadcastreceivers.PlayMusic;
 
 public class PlayMusicService extends IntentService {
 
